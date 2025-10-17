@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+.cabecalho{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4,auto);
+    justify-content: start;
+    gap: 50px;
+    font-size: 40px;
+    padding-left: 90px;
+    padding-top: 50px;
+    font-family: "Roboto", sans-serif;
+   
+}
+
+.cabecalho i{
+  padding-left: 50pc;
+}
+.cabecalho a{
+    color: aliceblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+.cabecalho a::after{
+    width: 100%;
+    height: 3px;
+    background: #fff ;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.cabecalho a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.Titulo{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    padding-left: 92px;
+    padding-top: 100px;
+    font-family: "Roboto", sans-serif;
+
+}
+h1{
+    font-size: 50px;
+    color: aliceblue;
+    font-family: 100;
+}
+h3{
+    color: aliceblue;
+    font-weight: 100;
+}
+button{
+    background-color: rgb(104, 5, 175);
+    border-radius: 50px;
+    padding:15px 30px 15px  ;
+    border: none;
+    margin-top: 40px;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 30px;
+}
+i{
+  cursor: pointer;
+  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+
+.imagem{
+    width: 85%;
+    margin-top: -26%;
+    margin-left: -15%;
+    mix-blend-mode: lighten;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar{
+    0%  {
+     transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
