@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: black;
 }
+/*CABEÇALHO*/
 .cabecalho{
     display: grid;
     position: relative;
@@ -18,26 +19,31 @@
 }
 
 .cabecalho i{
-  padding-left: 50pc;
+  padding-left: 40pc;
+  transition: color 0.3s ease;
+}
+i:hover{
+    color: rgba(231, 224, 223, 0.623);
 }
 .cabecalho a{
     color: aliceblue;
     cursor: pointer;
     text-decoration: none;
 }
-.cabecalho a::after{
-    width: 100%;
-    height: 3px;
-    background: #fff ;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
+a{
+    transition: color 0.3s ease;
 }
-.cabecalho a:hover::after{
-    transform-origin: left;
-    transform: scaleX(1);
+a:hover{
+    color: rgba(231, 224, 223, 0.623);
 }
+
+i{
+  cursor: pointer;
+  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+/*CABEÇALHO FIM*/
+/*TITULO*/
 .Titulo{ 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,6 +62,8 @@ h3{
     color: aliceblue;
     font-weight: 100;
 }
+/*FIM DO TITULO*/
+/*BOTÃO*/
 button{
     background-color: rgb(104, 5, 175);
     border-radius: 50px;
@@ -65,31 +73,85 @@ button{
     cursor: pointer;
     color: aliceblue;
     font-size: 30px;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
-i{
-  cursor: pointer;
-  color: aliceblue;
-  font-family: "Roboto", sans-serif;
+button:hover{
+    transform: scale(1.1);
+    background-color:rgb(74, 13, 131);
 }
-
+/*BOTÃO FIM*/
+/*IMAGEM*/
 .imagem{
     width: 85%;
-    margin-top: -26%;
+    margin-top: -35%;
     margin-left: -15%;
     mix-blend-mode: lighten;
     animation: flutuar 3s ease-in-out infinite;
 }
 
 @keyframes flutuar{
-    0%  {
-     transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-20px);
-    }
-    100%{
-        transform: translateY(0);
-    }
+ 0%  {
+ transform: translateY(0);
+ }
+ 50%{
+ transform: translateY(-20px);
+ }
+ 100%{
+ transform: translateY(0);
 }
-
-
+}
+/*IMAGEM FIM*/
+/*AREA 51*/
+footer{
+ color: aliceblue;
+}
+/*AREA 51 FIM*/
+/*MIDIA QUERIS*/
+@media(max-width: 1280px){
+ .imagem{
+ margin-top: -30%;
+ }  
+}
+@media(max-width:1114px){
+ .cabecalho i{
+ padding-left: 35pc;
+ }
+}
+@media(max-width:884px){
+ .Titulo{
+ display: flex;
+ flex-direction: column-reverse;
+ align-items: center;
+ font-size: 40px;
+ font-family: "Roboto", sans-serif;
+ }
+ .imagem{
+  margin-left: 20%;
+  margin-top: -20px;
+  width: 50%;
+ }
+ button{
+    margin-left: 30%;
+ }
+ i{
+    margin-left: -20px;
+ }
+}
+@media(max-width:834px){
+ i{
+ margin-left: -50px;
+ }
+}
+@media(max-width:820px){
+.Titulo{
+ font-family: "Roboto", sans-serif;
+ font-size: 25px;
+}
+.cabecalho i{
+ padding-left: 14pc;
+}
+button{
+ margin-left: 20%;
+}
+}
